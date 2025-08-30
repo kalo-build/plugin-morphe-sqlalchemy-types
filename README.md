@@ -122,24 +122,10 @@ See [KALO_CONFIG_EXAMPLE.md](KALO_CONFIG_EXAMPLE.md) for detailed configuration 
 go test ./pkg/compile -v
 ```
 
-### Validate Generated Code
-```bash
-python testdata/validate_syntax.py
-```
-
 The plugin includes:
 - **Ground truth tests** that ensure output matches expected files
-- **Syntax validation** to ensure generated Python is valid
 - **Example test scripts** showing how to use the generated code
 
-## Development Experience
-
-This plugin was created using the morphe-types-template with these metrics:
-- **Time to working plugin**: ~25 minutes
-- **DX Score**: 8.5/10
-- **Main friction**: Import path updates and Python's import complexity
-
-See [DX-EVAL.md](DX-EVAL.md) for a detailed developer experience report.
 
 ## Project Structure
 
@@ -160,7 +146,6 @@ plugin-morphe-py-types/
 
 - Enum imports in models are tracked but require the enums to be accessible
 - Generated code uses relative imports (standard for Python packages)
-- Entity relationship loading is stubbed (requires actual implementation)
 
 ## License
 
